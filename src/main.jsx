@@ -8,6 +8,7 @@ import ErrorPage from './pages/ErrorPage';
 // import LoginPage from './pages/LoginPage';
 import Root from './pages/Root';
 import EmailSecurity from './components/emailSecurity/EmailSecurity';
+import NetworkSecurity from './components/networkSecurity/NetworkSecurity';
 
 // Loaders
 const router = createBrowserRouter([
@@ -32,10 +33,10 @@ const router = createBrowserRouter([
         path: 'email-security',
         element: <EmailSecurity />,
       },
-      // {
-      //   path: 'email-security',
-      //   element: <Registration />,
-      // },
+      {
+        path: 'network-security',
+        element: <NetworkSecurity />,
+      },
     ]
   },
   

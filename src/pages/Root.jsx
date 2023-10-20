@@ -24,7 +24,9 @@ const Root = () => {
             </li>
 
             <li>
-                Network Secuirty
+                <Link to='network-security'>
+                    Network Secuirty
+                </Link>
             </li>
         </ul>
 
