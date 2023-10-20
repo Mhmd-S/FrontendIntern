@@ -5,7 +5,7 @@ const LoadingProccess = ({ percentage }) => {
   return (
     <div className='w-full h-3/4 flex flex-col justify-evenly items-center'>
         <h1 className='text-3xl'>
-            Scanning Email
+            Scanning in progress...
         </h1>
         <LoadingBar percentage={percentage}/>
         <h3 className='text-2xl text-[#C7DDFF]'>
