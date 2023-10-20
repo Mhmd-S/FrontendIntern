@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       //   element: <Registration />,
       // },
       {
-        path: 'network-security',
+        path: 'email-security',
         element: <EmailSecurity />,
       },
       // {

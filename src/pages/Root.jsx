@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 const Root = () => {
   return (
@@ -18,7 +18,9 @@ const Root = () => {
             </li>
             
             <li>
-                Email Security
+                <Link to='email-security'>
+                    Email Security
+                </Link>
             </li>
 
             <li>

@@ -2,7 +2,7 @@ import React from 'react'
 import StepIndicator from '../common/StepIndicator'
 import EmailNotifications from '../common/EmailNotifications'
 import LoadingProccess from '../common/LoadingProccess'
-
+import Result from '../common/Result'
 
 
 const ScanningEmail = () => {
@@ -14,7 +14,10 @@ const ScanningEmail = () => {
             currentStep={2} 
             />
         <div className='w-full h-full flex flex-col items-center justify-evenly bg-[#1E293B] rounded-r-xl shadow-[inset_5px_5px_15px_10px_#fafafa05]'>
-          <LoadingProccess percentage='40%'/>
+          <EmailNotifications />
+          {/* <LoadingProccess percentage='40%'/> */}
+          {/* <Result status='secure' /> */}
+          {/* <Result status='secure' /> */}
         </div>
     </div>
   )
