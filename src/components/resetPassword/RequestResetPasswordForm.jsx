@@ -21,7 +21,7 @@ const RequestResetPasswordForm = () => {
             Reset Password
         </h1>
 
-        <div className='w-1/3 h-4/5 grid grid-cols-1 grid-rows-[65%_35%]'>
+        <div className='w-3/4 h-3/6 md:w-1/3 md:h-3/5 grid grid-cols-1 grid-rows-[65%_35%]'>
 
             <div className='w-full h-full bg-[#1E293B] rounded-t-3xl px-6 border-b-[#304566] shadow-[inset_5px_5px_15px_10px_#fafafa05]'>
                 <Form>
