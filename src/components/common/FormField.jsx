@@ -13,7 +13,7 @@ const FormField = ({
   ...inputProps
 }) => {
   return (
-    <div className='w-full flex flex-col'>
+    <div className='w-full flex flex-col py-2'>
       
       <label htmlFor={name} className="block text-lg pb-4 underline font-medium leading-6 text-white">
         {label}

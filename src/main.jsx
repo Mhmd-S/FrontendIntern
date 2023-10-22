@@ -9,6 +9,7 @@ import ErrorPage from './pages/ErrorPage';
 import Root from './pages/Root';
 import EmailSecurity from './components/emailSecurity/EmailSecurity';
 import NetworkSecurity from './components/networkSecurity/NetworkSecurity';
+import RequestResetPasswordForm from './components/resetPassword/RequestResetPasswordForm';
 
 // Loaders
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: 'network-security',
         element: <NetworkSecurity />,
+      },
+      {
+        path: 'request-reset-password',
+        element: <RequestResetPasswordForm />,
       },
     ]
   },

@@ -19,7 +19,7 @@ const InitiationNetworkSecurity = () => {
     return (
         <div className='w-full h-full grid grid-cols-[50%_50%] grid-rows-1'>
                 
-            <div className='w-full h-full px-[5.5rem] py-5'>
+                <div className='w-full h-full px-[5.5rem] py-5'>
                     <h1 className='w-full text-[5rem]'>
                             Network Security Explorer
                     </h1>
@@ -28,45 +28,45 @@ const InitiationNetworkSecurity = () => {
                     </p>
             </div>
 
-            <div className='w-full h-full grid grid-cols-1 grid-rows-[65%_35%] justify-center items-center p-20 '>
-                    <div className='w-full h-full p-8 grid grid-rows-[10%_90%] grid-cols-1 justify-center items-center rounded-t-3xl bg-[#1E293B] border-b-2 border-b-[#304566] shadow-[inset_5px_5px_15px_10px_#fafafa05]'>
-                            <FormGeneralErrorMessage generalError={generalError} />
-                            <Form onSubmit={handleSubmit(onSubmit)} loading={loading}>
-                                    <FormField
-                                            label='IP Address'
-                                            name='ipAddress'
-                                            type='text'
-                                            register={register}
-                                            errors={errors}
-                                            placeholder='ex. 192.168.0.1'
-                                            validationRules={{
-                                                required: 'IP Address is required',
-                                                pattern: {
-                                                    value: /^([0-9]{1,3}\.){3}[0-9]{1,3}$/,
-                                                    message: 'Invalid IP Address',
-                                                },
-                                            }}
-                                    />
-                                    <FormField
-                                            label='Port'
-                                            name='port'
-                                            type='number'
-                                            register={register}
-                                            errors={errors}
-                                            placeholder='ex. 80'
-                                            validationRules={{
-                                                required: 'Port is required',
-                                                min: {
-                                                    value: 1,
-                                                    message: 'Port must be greater than 0',
-                                                },
-                                                max: {
-                                                    value: 65535,
-                                                    message: 'Port must be less than or equal to 65535',
-                                                },
-                                            }}
-                                    />
-                                    <FormButton text='Initiate Testing' />
+            <div className='w-full h-full grid grid-cols-1 grid-rows-[75%_25%] justify-center items-center p-20 '>
+                 <div className='w-full h-full p-8 grid grid-rows-[10%_90%] grid-cols-1 justify-center items-center rounded-t-3xl bg-[#1E293B] border-b-2 border-b-[#304566] shadow-[inset_5px_5px_15px_10px_#fafafa05]'>
+                        <FormGeneralErrorMessage generalError={generalError} />
+                                <Form onSubmit={handleSubmit(onSubmit)} loading={loading}>
+                                        <FormField
+                                                label='IP Address'
+                                                name='ipAddress'
+                                                type='text'
+                                                register={register}
+                                                errors={errors}
+                                                placeholder='ex. 192.168.0.1'
+                                                validationRules={{
+                                                    required: 'IP Address is required',
+                                                    pattern: {
+                                                        value: /^([0-9]{1,3}\.){3}[0-9]{1,3}$/,
+                                                        message: 'Invalid IP Address',
+                                                    },
+                                                }}
+                                        />
+                                        <FormField
+                                                label='Port'
+                                                name='port'
+                                                type='number'
+                                                register={register}
+                                                errors={errors}
+                                                placeholder='ex. 80'
+                                                validationRules={{
+                                                    required: 'Port is required',
+                                                    min: {
+                                                        value: 1,
+                                                        message: 'Port must be greater than 0',
+                                                    },
+                                                    max: {
+                                                        value: 65535,
+                                                        message: 'Port must be less than or equal to 65535',
+                                                    },
+                                                }}
+                                        />
+                                <FormButton text='Initiate Testing' />
                             </Form>
                     </div>
 
