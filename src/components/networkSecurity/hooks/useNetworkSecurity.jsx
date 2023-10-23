@@ -4,7 +4,7 @@ import ScanningNetwork from '../ScanningNetwork';
 
 const useNetworkSecurity = () => {
 
-    const [ step, setStep ] = useState(1);
+    const [ step, setStep ] = useState(0);
     const [ email, setEmail ] = useState('');
 
     const renderNetworkSecurity = () => {

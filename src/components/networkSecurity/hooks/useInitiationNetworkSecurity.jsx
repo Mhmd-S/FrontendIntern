@@ -6,13 +6,16 @@ const useInitiationNetworkSecurity = ( nextStep ) => {
     
     const [loading, setLoading] = useState(false);
     const [generalError, setGeneralError] = useState(null); 
+    const [portRange, setPortRange] = useState('critical');
 
     const { 
         register, 
         handleSubmit, 
+        watch,
         formState: { errors } 
     } = useForm();
 
+    const portRangeWatch = watch('portRange');
 
     const onSubmit = async(data) => {
             
@@ -33,6 +36,7 @@ const useInitiationNetworkSecurity = ( nextStep ) => {
         register, 
         handleSubmit, 
         onSubmit,
+        portRangeWatch,
         generalError, 
         errors,
         loading,
