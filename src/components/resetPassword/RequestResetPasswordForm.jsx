@@ -25,7 +25,7 @@ const RequestResetPasswordForm = () => {
 
             <div className='w-full h-full bg-[#1E293B] rounded-t-3xl px-6 border-b-[#304566] shadow-[inset_5px_5px_15px_10px_#fafafa05]'>
                 <Form>
-                    {/* <FormGeneralErrorMessage message={}/> */}
+                    <FormGeneralErrorMessage message={generalErrorMessage}/>
                     <FormField
                         type='email'
                         name='email'
