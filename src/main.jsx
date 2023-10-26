@@ -20,10 +20,10 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
-      // {
-      //   path: '', // Landing page
-      //   element: <Landing />,
-      // },
+      {
+        path: '', // Landing page
+        element: <Landing />,
+      },
       {
         path: "landing",
         element: <Landing />,
