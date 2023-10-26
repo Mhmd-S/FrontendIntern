@@ -11,6 +11,7 @@ import EmailSecurity from "./components/emailSecurity/EmailSecurity";
 import NetworkSecurity from "./components/networkSecurity/NetworkSecurity";
 import RequestResetPasswordForm from "./components/resetPassword/RequestResetPasswordForm";
 import Login from "./components/login/login";
+import Landing from "./components/landing/Landing";
 
 // Loaders
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       //   path: '', // Landing page
       //   element: <Landing />,
       // },
+      {
+        path: "landing",
+        element: <Landing />,
+      },
       {
         path: "login",
         element: <Login />,

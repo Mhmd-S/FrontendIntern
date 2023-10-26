@@ -1,43 +1,56 @@
 import React from "react";
 import PrimaryButton from "../common/PrimaryButton";
+import FormField from "../common/FormField";
+import useLogin from "./hooks/useLogin";
+import FormGeneralErrorMessage from "../common/FormGeneralErrorMessage";
+import Form from "../common/Form";
+import FormButton from "../common/FormButton";
 
 const Login = () => {
+  const { register, handleSubmit, onSubmit, generalError, errors, loading } =
+    useLogin();
+
   return (
     <div className="w-full h-screen flex items-center justify-center">
       <div className="w-full max-w-sm p-6  bg-[#1E293B] rounded-md shadow-lg">
         <h2 className="text-2xl text-center">Welcome Back!</h2>
         <form className="mt-4">
           <div className="mb-4">
-            <label
-              htmlFor="username"
-              className="block text-gray-600 text-sm font-medium"
-            >
-              Username
-            </label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              className="w-full py-2 px-3 border border-gray-300 rounded-md focus:ring focus:ring-indigo-300 focus:ring-opacity-50 focus:outline-none"
-              placeholder="Enter your username"
-            />
+            <FormGeneralErrorMessage
+              generalError={generalError}
+            ></FormGeneralErrorMessage>
+            <Form onSubmit={handleSubmit(onSubmit)} loading={loading}>
+              <FormField
+                name="email"
+                defaultValue=""
+                placeholder="Email"
+                register={register}
+                errors={errors}
+                validationRules={{
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                    message: "Invalid Email",
+                  },
+                }}
+              ></FormField>
+              <FormField
+                name="password"
+                defaultValue=""
+                placeholder="Password"
+                register={register}
+                errors={errors}
+                validationRules={{
+                  required: "Password is required",
+                  pattern: {
+                    value: /^.*\S+.*$/,
+                    message: "Password cannot be empty",
+                  },
+                }}
+              ></FormField>
+              <FormButton text="Login" />
+            </Form>
           </div>
-          <div className="mb-6">
-            <label
-              htmlFor="password"
-              className="block text-gray-600 text-sm font-medium"
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              className="w-full py-2 px-3 border border-gray-300 rounded-md focus:ring focus:ring-indigo-300 focus:ring-opacity-50 focus:outline-none"
-              placeholder="Enter your password"
-            />
-          </div>
-          <PrimaryButton>Login</PrimaryButton>
         </form>
       </div>
     </div>

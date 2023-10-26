@@ -3,6 +3,7 @@ import PrimaryButton from "../common/PrimaryButton";
 import Menu from "./Menu";
 import MailIcon from "../icons/MailIcon";
 import InternetIcon from "../icons/InternetIcon";
+import Footer from "../common/Footer";
 
 const Landing = () => {
   return (
@@ -34,6 +35,7 @@ const Landing = () => {
           ></Menu>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

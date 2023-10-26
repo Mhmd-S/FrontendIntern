@@ -20,7 +20,7 @@ const Navbar = () => {
         }  p-4 w-[90%] bg-[#202447e0] ring-2 rounded-lg translate-x-[-50%] top-full left-1/2 flex flex-col [&>*]:hover:pointer [&>*]:p-4 [&>*]:w-full md:flex md:items-center md:flex-row md:bg-transparent md:w-max md:ring-0 md:translate-x-0 md:[&>*]:w-max md:[&>*]:px-5 md:[&>*]:py-0`}
       >
         <li>
-          <Link to="/"> Home</Link>
+          <Link to="/landing"> Home</Link>
         </li>
 
         <li>
