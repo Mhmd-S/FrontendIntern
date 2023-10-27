@@ -14,12 +14,14 @@ const Login = () => {
     <div className="w-full h-screen flex items-center justify-center">
       <div className="w-full max-w-sm p-6  bg-[#1E293B] rounded-md shadow-lg">
         <h2 className="text-2xl text-center">Welcome Back!</h2>
-        <form className="mt-4">
           <div className="mb-4">
+            
+            <Form onSubmit={handleSubmit(onSubmit)} loading={loading}>
+
             <FormGeneralErrorMessage
               generalError={generalError}
-            ></FormGeneralErrorMessage>
-            <Form onSubmit={handleSubmit(onSubmit)} loading={loading}>
+            />
+
               <FormField
                 name="email"
                 defaultValue=""
@@ -42,16 +44,11 @@ const Login = () => {
                 errors={errors}
                 validationRules={{
                   required: "Password is required",
-                  pattern: {
-                    value: /^.*\S+.*$/,
-                    message: "Password cannot be empty",
-                  },
                 }}
               ></FormField>
               <FormButton text="Login" />
             </Form>
           </div>
-        </form>
       </div>
     </div>
   );
