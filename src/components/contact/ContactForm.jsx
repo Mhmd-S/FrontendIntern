@@ -1,50 +1,66 @@
 import React from "react";
 import FormField from "../common/FormField";
-import useLogin from "./hooks/useLogin";
 import FormGeneralErrorMessage from "../common/FormGeneralErrorMessage";
 import Form from "../common/Form";
 import FormButton from "../common/FormButton";
+import useContact from "./hooks/useContact";
 
-const Login = () => {
+const ContactForm = () => {
   const { register, handleSubmit, onSubmit, generalError, errors, loading } =
-    useLogin();
+    useContact();
 
   return (
     <div className="w-full h-screen flex items-center justify-center">
       <div className="w-full max-w-sm p-6  bg-[#1E293B] rounded-md shadow-lg">
-        <h2 className="text-2xl text-center">Welcome Back!</h2>
         <div className="mb-4">
           <FormGeneralErrorMessage generalError={generalError} />
           <Form onSubmit={() => handleSubmit(onSubmit)} loading={loading}>
             <FormField
-              name="email"
+              label="First Name"
+              name="first"
               defaultValue=""
-              placeholder="Email"
+              placeholder="First Name"
               register={register}
               errors={errors}
               validationRules={{
-                required: "Email is required",
+                required: "First Name is required",
                 pattern: {
-                  value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-                  message: "Invalid Email",
+                  value: /^[A-Za-z]+(?:[ -][A-Za-z]+)*$/,
+                  message: "First Name cannot have any number of symbols",
                 },
               }}
             ></FormField>
             <FormField
-              name="password"
+              label="Last Name"
+              name="last"
               defaultValue=""
-              placeholder="Password"
+              placeholder="Last Name"
               register={register}
               errors={errors}
               validationRules={{
-                required: "Password is required",
+                required: "Last Name is required",
                 pattern: {
-                  value: /^.*\S+.*$/,
-                  message: "Password cannot be empty",
+                  value: /^[A-Za-z]+(?:[ -][A-Za-z]+)*$/,
+                  message: "Last Name cannot have any number of symbols",
                 },
               }}
             ></FormField>
-            <FormButton text="Login" />
+            <FormField
+              label="Message"
+              name="message"
+              defaultValue=""
+              placeholder="Message"
+              register={register}
+              errors={errors}
+              validationRules={{
+                required: "Message is required",
+                pattern: {
+                  value: /^.*\S+.*$/,
+                  message: "Message cannot be empty",
+                },
+              }}
+            ></FormField>
+            <FormButton text="Send" />
           </Form>
         </div>
       </div>
@@ -52,4 +68,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ContactForm;
