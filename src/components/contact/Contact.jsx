@@ -7,7 +7,7 @@ import PinIcon from "../icons/PinIcon";
 const Contact = () => {
   return (
     <>
-      <di className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen">
         <div className="w-4/5">
           <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
             <div className="flex flex-col justify-center md:col-span-1 sm:col-span-2">
@@ -40,7 +40,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </di>
+      </div>
     </>
   );
 };

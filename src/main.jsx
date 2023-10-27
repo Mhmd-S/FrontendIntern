@@ -13,6 +13,7 @@ import RequestResetPasswordForm from "./components/resetPassword/RequestResetPas
 import Login from "./components/login/login";
 import Landing from "./components/landing/Landing";
 import Contact from "./components/contact/Contact";
+import FileSecurity from "./components/fileSecurity/fileSecurity";
 
 // Loaders
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       //   path: 'registration',
       //   element: <Registration />,
       // },
+      {
+        path: "file-security",
+        element: <FileSecurity />,
+      },
       {
         path: "email-security",
         element: <EmailSecurity />,
