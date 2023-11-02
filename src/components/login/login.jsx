@@ -14,8 +14,8 @@ const Login = () => {
       <div className="w-full max-w-sm p-6  bg-[#1E293B] rounded-md shadow-lg">
         <h2 className="text-2xl text-center">Welcome Back!</h2>
         <div className="mb-4">
-          <FormGeneralErrorMessage generalError={generalError} />
           <Form onSubmit={() => handleSubmit(onSubmit)} loading={loading}>
+          <FormGeneralErrorMessage generalError={generalError} />
             <FormField
               name="email"
               defaultValue=""
