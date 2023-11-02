@@ -4,7 +4,7 @@ import ScanningFile from '../ScanningFile';
 
 const useFileSecurity = () => {
 
-    const [ step, setStep ] = useState(1);
+    const [ step, setStep ] = useState(0);
     const [ file, setFile ] = useState('');
 
     const renderFileSecurity = () => {
