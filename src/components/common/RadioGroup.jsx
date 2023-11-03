@@ -5,7 +5,7 @@ import FormFieldError from './FormFieldError';
 const RadioGroup = ({ name, label, options, register, validationRules, errors, defaultOption }) => (
   <fieldset className='w-full flex flex-col p-2'>
     <legend className="block text-lg pb-4 underline font-medium leading-6 text-white">{label}</legend>
-    <div className='w-full h-full flex justify-evenly'>
+    <div className='w-full h-full grid grid-rows-2 grid-cols-2 justify-items-start gap-2 md:flex md:justify-evenly'>
       {options.map((option) => (
         <RadioButton
           key={option.value}

@@ -10,6 +10,7 @@ import Root from "./pages/Root";
 import EmailSecurity from "./components/emailSecurity/EmailSecurity";
 import NetworkSecurity from "./components/networkSecurity/NetworkSecurity";
 import RequestResetPasswordForm from "./components/resetPassword/RequestResetPasswordForm";
+import UrlSecurity from "./components/urlSecurity/UrlSecurity";
 import Login from "./components/login/login";
 import Landing from "./components/landing/Landing";
 import Contact from "./components/contact/Contact";
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "email-security",
         element: <EmailSecurity />,
+      },
+      {
+        path: "url-security",
+        element: <UrlSecurity />,
       },
       {
         path: "contact-us",

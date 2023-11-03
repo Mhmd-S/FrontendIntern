@@ -1,7 +1,7 @@
 import React from 'react';
 
 const RadioButton = ({ id, name, value, label, register, validationRules, isChecked }) => (
-  <label htmlFor={id} className='flex items-center justify-center'>
+  <label htmlFor={id} className='flex items-center justify-center px-2'>
     <input
       type='radio'
       id={id}
