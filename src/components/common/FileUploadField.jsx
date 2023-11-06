@@ -52,7 +52,6 @@ const FileUploadField = ({
       <input
         type='file'
         name={name}
-        accept='image/png, image/gif, image/jpeg'
         {...register(name, validationRules)}
         onInput={handleFileChange}
         className={`opacity-0 absolute w-full h-full ${imageFile && 'hidden'}`}

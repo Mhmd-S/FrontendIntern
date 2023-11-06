@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        '16': 'repeat(16, minmax(0, 1fr))',
+
+        // Complex site-specific column configuration
+        'table': 'repeat(6, max-content)',
+      },
       fontFamily: {
         "Inter": ['Inter', 'sans-serif']
     },
