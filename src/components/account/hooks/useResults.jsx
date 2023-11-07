@@ -19,7 +19,7 @@ const useResults = () => {
         const result = new Date(a.time) - new Date(b.time);
         return result; 
       } else if (selectedSortBy === 'number') {
-        return a.number - b.number; 
+        return b.number - a.number; 
       }
       return 0;
     });

@@ -8,7 +8,7 @@ export const dummyData = [
         },
         {
             number: 3,
-            status: 'Failed',
+            status: 'Complete',
             type: 'Network Scan',
             time: '234',
             result: '3 high severity issues found'

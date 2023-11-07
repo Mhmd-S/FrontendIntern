@@ -18,6 +18,7 @@ import FileSecurity from "./components/fileSecurity/fileSecurity";
 import History from "./components/history/History";
 import Account from "./components/account/Account";
 import Results from "./components/account/Results";
+import Menu from "./components/menu/Menu";
 
 // Loaders
 const router = createBrowserRouter([
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: "history",
         element: <History />,
+      },
+      {
+        path: "menu",
+        element: <Menu />,
       },
       {
         path: "account",
