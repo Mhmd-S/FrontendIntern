@@ -16,6 +16,8 @@ import Landing from "./components/landing/Landing";
 import Contact from "./components/contact/Contact";
 import FileSecurity from "./components/fileSecurity/fileSecurity";
 import History from "./components/history/History";
+import Account from "./components/account/Account";
+import Results from "./components/account/Results";
 
 // Loaders
 const router = createBrowserRouter([
@@ -67,6 +69,16 @@ const router = createBrowserRouter([
       {
         path: "history",
         element: <History />,
+      },
+      {
+        path: "account",
+        element: <Account />,
+        children: [
+          {
+            path: "results",
+            element: <Results />,
+          },
+        ],
       },
     ],
   },
