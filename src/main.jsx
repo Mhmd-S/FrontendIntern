@@ -10,10 +10,15 @@ import Root from "./pages/Root";
 import EmailSecurity from "./components/emailSecurity/EmailSecurity";
 import NetworkSecurity from "./components/networkSecurity/NetworkSecurity";
 import RequestResetPasswordForm from "./components/resetPassword/RequestResetPasswordForm";
+import UrlSecurity from "./components/urlSecurity/UrlSecurity";
 import Login from "./components/login/login";
 import Landing from "./components/landing/Landing";
 import Contact from "./components/contact/Contact";
 import FileSecurity from "./components/fileSecurity/fileSecurity";
+import History from "./components/history/History";
+import Account from "./components/account/Account";
+import Results from "./components/account/Results";
+import Menu from "./components/menu/Menu";
 
 // Loaders
 const router = createBrowserRouter([
@@ -51,6 +56,10 @@ const router = createBrowserRouter([
         element: <EmailSecurity />,
       },
       {
+        path: "url-security",
+        element: <UrlSecurity />,
+      },
+      {
         path: "contact-us",
         element: <Contact />,
       },
@@ -62,9 +71,26 @@ const router = createBrowserRouter([
         path: "request-reset-password",
         element: <RequestResetPasswordForm />,
       },
+      {
+        path: "history",
+        element: <History />,
+      },
+      {
+        path: "menu",
+        element: <Menu />,
+      },
+      {
+        path: "account",
+        element: <Account />,
+        children: [
+          {
+            path: "results",
+            element: <Results />,
+          },
+        ],
+      },
     ],
   },
-
   {
     path: "*",
     element: <ErrorPage />,

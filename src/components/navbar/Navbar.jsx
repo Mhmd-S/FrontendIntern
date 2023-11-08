@@ -7,7 +7,7 @@ const Navbar = () => {
   const { menuOpen, toggleMenu } = useNavbar();
 
   return (
-    <div className="relative w-full flex justify-between items-center flex-row p-4">
+    <div className="relative w-full flex justify-between items-center flex-row p-4 z-20">
       <div>PentestTool</div>
 
       <div className="right-0 md:hidden" onClick={toggleMenu}>
@@ -23,13 +23,9 @@ const Navbar = () => {
           <Link to="/landing">Home</Link>
         </li>
         <li>
-          <Link to="email-security">Email Security</Link>
-        </li>
-        <li>
-          <Link to="network-security">Network Security</Link>
-        </li>
-        <li>
-          <Link to="file-security">File Scanning</Link>
+          <Link to="menu">
+            Tools Menu
+          </Link>
         </li>
         <li>
           <Link to="/login">Login</Link>
