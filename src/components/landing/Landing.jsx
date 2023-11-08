@@ -24,14 +24,14 @@ const Landing = () => {
             title="Email Security Explorer"
             buttonContent="Secure Your Email"
             icon={<MailIcon />}
-            link='/email-security'
+            link="/email-security"
             content="Find out the security flaws in your email.
             An secure email is your first line of defense"
           ></Menu>
           <Menu
             title="Network Security Sentry"
             buttonContent="Secure Your Network"
-            link='/network-security'
+            link="/network-security"
             icon={<InternetIcon />}
             content="In today's connected world, safeguarding your digital assets is paramount. That's where Network Security Sentry steps in."
           ></Menu>
