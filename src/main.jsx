@@ -45,6 +45,10 @@ const router = createBrowserRouter([
       //   element: <Registration />,
       // },
       {
+        path: "user-profile",
+        element: <FileSecurity />,
+      },
+      {
         path: "file-security",
         element: <FileSecurity />,
       },
