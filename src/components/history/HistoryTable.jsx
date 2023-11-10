@@ -1,6 +1,7 @@
 import React from 'react'
 import useHistoryTable from './hooks/useHistoryTable'
 import FormButton from '../common/FormButton';
+import { Link } from 'react-router-dom';
 
 const HistoryTable = ({ scanType }) => {
 
@@ -14,7 +15,9 @@ const HistoryTable = ({ scanType }) => {
             History
         </h1>
 
-        <FormButton text='Details' />
+        <Link to='/account/results'>
+          <FormButton text='Details' />
+        </Link>
     </div>
 
         {renderTable()}

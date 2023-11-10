@@ -19,6 +19,7 @@ import History from "./components/history/History";
 import Account from "./components/account/Account";
 import Results from "./components/account/Results";
 import Menu from "./components/menu/Menu";
+import ChangeInformation from "./components/account/ChangeInformation";
 
 // Loaders
 const router = createBrowserRouter([
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
             path: "results",
             element: <Results />,
           },
+          {
+            path: "information",
+            element: <ChangeInformation />,
+          }
         ],
       },
     ],

@@ -1,6 +1,6 @@
 import React from 'react'
 import AccountMenu from './AccountMenu'
-import useAccount from './hooks/useAccount'
+
 import { Outlet } from "react-router-dom";
 
 const Account = () => {
@@ -12,8 +12,8 @@ const Account = () => {
           </h1>
     
           <div className='w-full h-full px-4 grid grid-rows-[15%_85%] md:grid-cols-[30%_70%] md:grid-rows-1 md:px-[3rem] py-[1rem]'>
-              <AccountMenu />
-              <Outlet />
+            <AccountMenu />
+            <Outlet />
           </div>
     
       </div>
